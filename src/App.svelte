@@ -1,17 +1,15 @@
 <script>
-	import css from '$lib/css/app.css';
-	import GenericComponent from "./GenericComponent.svelte";
-	let myInput = "";
+	import Nanogram from './Nanogram.svelte'
+	import nanogramJSONObject from './shared/files/nanogram/level1.json';
 </script>
 
 <main>
 	<h1>Something Awesome is coming....</h1>
 </main>
 
-<section class="gatherInformation">
-	<GenericComponent bind:someVar={myInput} />
-</section>
+<section>
+	A nanogram game written in svelte
+	<br>
+	<Nanogram nanogramPuzzleObject={nanogramJSONObject} />
 
-<section class="displayInformaiton">
-	Great input: {myInput}
 </section>
